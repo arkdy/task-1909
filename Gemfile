@@ -34,6 +34,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'awesome_rails_console' # Rails console enhancement
 end
 
 group :test do
@@ -59,3 +60,6 @@ gem 'simple_form', github: 'plataformatec/simple_form'
 
 # Preferred Templating engine
 gem 'haml'
+
+# A library for bulk insertion of data into your database using ActiveRecord
+gem 'activerecord-import'
