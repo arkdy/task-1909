@@ -1,0 +1,21 @@
+%h2.mb-4 Period Accuracy
+
+= simple_form_for :accuracy, url: period_accuracy_path, method: :get, wrapper: :horizontal_form, html: { class: 'col-6'} do |f|
+  = f.input :username, as: :string, input_html: { name: 'username', value: params[:username] || 'user1' }
+  = f.input :from_date, as: :string, input_html: { name: 'from_date', value: params[:from_date] || '2019-08-10' }
+  = f.input :to_date, as: :string, input_html: { name: 'to_date', value: params[:to_date] || '2019-08-30' }
+
+  = f.button :submit, 'Submit'
+
+- if @page.user.present?
+  .row.mt-4
+    .card.col-3
+      .card-body
+        Overall accuracy
+        = @page.overall_accuracy
+
+    - if @page.from_date.present? && @page.to_date.present?
+      .card.col-3
+        .card-body
+          Date range accuracy
+          = @page.date_range_accuracy

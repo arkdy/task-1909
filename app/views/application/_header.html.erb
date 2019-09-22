@@ -1,15 +1,15 @@
 <div class="app-header">
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <%= link_to "Memseed", '#', class: "navbar-brand" %>
+      <%= link_to "Memseed", root_url, class: "navbar-brand" %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbar-header">
         <ul class="navbar-nav ml-auto">
-          <%= content_tag(:li, link_to("Area1", '#', class: "nav-link"), class: "nav-item") %>
-          <%= content_tag(:li, link_to("Area2", '#', class: "nav-link"), class: "nav-item") %>
+          <%= content_tag(:li, link_to("Period Accuracy", period_accuracy_url, class: "nav-link"), class: "nav-item") %>
+          <%= content_tag(:li, link_to("Weekly Rankings", weekly_rankings_url, class: "nav-link"), class: "nav-item") %>
         </ul>
       </div>
     </div>

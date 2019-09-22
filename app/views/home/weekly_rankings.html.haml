@@ -1,0 +1,26 @@
+%h2.mb-4 Weekly Rankings
+
+%p
+  Note: Weeks start on Monday and end on Sunday
+= simple_form_for :ranking, url: weekly_rankings_path, method: :get, wrapper: :horizontal_form, html: { class: 'col-6'} do |f|
+  = f.input :start_date, as: :string, input_html: { name: 'from_date', value: params[:from_date] || '2019-09-02' }
+
+  = f.button :submit, 'Submit'
+
+- if params[:from_date].present?
+  %table.table.mt-4
+    %tr
+      %th #
+      %th Name
+      %th Accuracy
+      %th Change
+    - @page.top_users.each.with_index(1) do |user, idx|
+      %tr
+        %td
+          =idx
+        %td
+          =user[:name]
+        %td
+          ="#{user[:accuracy]}%"
+        %td
+          =sprintf "%+d%%", user[:change]
