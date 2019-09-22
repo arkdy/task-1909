@@ -60,6 +60,3 @@ gem 'simple_form', github: 'plataformatec/simple_form'
 
 # Preferred Templating engine
 gem 'haml'
-
-# A library for bulk insertion of data into your database using ActiveRecord
-gem 'activerecord-import'
