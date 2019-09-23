@@ -15,4 +15,5 @@
 
 1. Write fixtures, models and integration tests
 2. Implement validation of the form user input
+3. Cache aggregated values, rankings in separate tables/views
 
